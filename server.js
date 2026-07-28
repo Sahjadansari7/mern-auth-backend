@@ -73,7 +73,9 @@ const bcrypt = require('bcrypt');
 
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: ['https://mern-auth-frontend-opal.vercel.app', 'http://localhost:5173']
+}));
 app.use(express.json());
 
 //mongodb connection
